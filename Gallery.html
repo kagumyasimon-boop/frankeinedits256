@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>THE GALLERY | FRANK EIN EDITS</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&family=Noto+Serif:wght@500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1" rel="stylesheet"/>
+    <style>
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .glass-card { background: rgba(26, 26, 26, 0.6); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.08); }
+        .cinematic-aspect { aspect-ratio: 2.39 / 1; }
+        .portrait-aspect { aspect-ratio: 4 / 5; }
+        .video-portrait-aspect { aspect-ratio: 9 / 16; }
+        .video-landscape-aspect { aspect-ratio: 16 / 9; }
+        #mobile-menu.hidden { display: none; }
+    </style>
+</head>
+<body class="bg-[#131313] text-white font-['Manrope'] overflow-x-hidden selection:bg-[#D4AF37]/30">
+
+<nav class="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-xl border-b border-white/10 shadow-2xl">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-16 py-4 flex justify-between items-center">
+        <div class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-[#D4AF37]">movie_edit</span>
+            <span class="text-lg font-light tracking-[0.2em] font-serif uppercase">FRANK EIN EDITS</span>
+        </div>
+        
+        <div class="hidden md:flex items-center gap-8 font-serif tracking-widest uppercase text-[10px]">
+            <a class="text-neutral-400 hover:text-white transition-colors" href="index.html">HOME</a>
+            <a class="text-[#D4AF37] border-b border-[#D4AF37] pb-1" href="Gallery.html">GALLERY</a>
+            <a class="text-neutral-400 hover:text-white transition-colors" href="contact.html">CONTACT</a>
+        </div>
+
+        <button class="md:hidden text-white" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+            <span class="material-symbols-outlined">menu</span>
+        </button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-black border-b border-white/10 p-6 space-y-4 font-serif text-center uppercase text-xs tracking-widest">
+        <a class="block text-neutral-400" href="index.html">HOME</a>
+        <a class="block text-[#D4AF37]" href="Gallery.html">GALLERY</a>
+        <a class="block text-neutral-400" href="contact.html">CONTACT</a>
+    </div>
+</nav>
+
+<main class="pt-32 pb-24 max-w-[1440px] mx-auto px-6 md:px-16">
+    <header class="mb-12 flex flex-col items-center text-center">
+        <span class="text-[#D4AF37] tracking-[0.4em] text-[10px] uppercase mb-2">CURATED WORKS</span>
+        <h1 class="text-4xl md:text-6xl font-serif font-bold uppercase tracking-tight">THE GALLERY</h1>
+        <div class="w-24 h-px bg-[#D4AF37]/40 mt-6"></div>
+    </header>
+
+    <!-- TAB NAVIGATION FOR PHOTO & VIDEO GALLERIES -->
+    <div class="flex justify-center gap-4 mb-16">
+        <button onclick="switchGallery('photo')" id="photo-tab-btn" class="px-8 py-3 font-serif uppercase tracking-widest text-xs transition-all duration-300 rounded-lg bg-[#D4AF37] text-black font-semibold shadow-lg">Photo Gallery</button>
+        <button onclick="switchGallery('video')" id="video-tab-btn" class="px-8 py-3 font-serif uppercase tracking-widest text-xs transition-all duration-300 rounded-lg bg-neutral-900 text-neutral-400 border border-white/5 hover:text-white">Video Gallery</button>
+    </div>
+
+    <!-- PHOTO GALLERY SECTION -->
+    <div id="photo-gallery-section" class="space-y-12">
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+            <div class="relative group overflow-hidden rounded-lg cinematic-aspect bg-neutral-900 border border-white/5 shadow-2xl">
+                <img class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105" src="image/Frankein Website_71.jpg" alt="Narrative Color Grading"/>
+                <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all flex items-center justify-center">
+                    <div class="bg-[#D4AF37] text-black w-16 h-16 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                    </div>
+                </div>
+                <div class="absolute bottom-0 left-0 right-0 p-6 glass-card translate-y-full group-hover:translate-y-0 transition-transform">
+                    <p class="text-[10px] text-[#D4AF37] uppercase tracking-widest mb-1">FEATURED REEL</p>
+                    <h3 class="text-xl font-serif">NARRATIVE COLOR GRADING 2024</h3>
+                </div>
+            </div>
+            <div class="relative group overflow-hidden rounded-lg cinematic-aspect bg-neutral-900 border border-white/5 shadow-2xl">
+                <img class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105" src="image/Frankein Website.jpg" alt="Skin Retouching"/>
+                <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all flex items-center justify-center">
+                    <div class="bg-cyan-500 text-black w-16 h-16 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                    </div>
+                </div>
+                <div class="absolute bottom-0 left-0 right-0 p-6 glass-card translate-y-full group-hover:translate-y-0 transition-transform">
+                    <p class="text-[10px] text-cyan-400 uppercase tracking-widest mb-1">COMMERCIAL SHOWCASE</p>
+                    <h3 class="text-xl font-serif">SKIN RETOUCHING & TEXTURE</h3>
+                </div>
+            </div>
+        </section>
+
+        <section class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="col-span-2 row-span-2 relative group overflow-hidden rounded-lg border border-white/5 aspect-square">
+                <img src="image/Frankein Website_50.jpg" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" alt="Porcelain Depth"/>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent flex flex-col justify-end p-6 opacity-0 group-hover:opacity-100 transition-opacity">
+                    <span class="text-[10px] text-[#D4AF37] uppercase mb-1">SKIN MASTERCLASS</span>
+                    <h4 class="text-xl font-serif">PORCELAIN DEPTH</h4>
+                </div>
+            </div>
+
+            <div class="portrait-aspect group overflow-hidden rounded-lg border border-white/5"><img src="image/Frankein Website_51.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-all" alt="Color Grade"/></div>
+            <div class="portrait-aspect group overflow-hidden rounded-lg border border-white/5"><img src="image/Frankein Website_61.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-all" alt="Editorial"/></div>
+            <div class="portrait-aspect group overflow-hidden rounded-lg border border-white/5"><img src="image/Frankein Website_58.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-all" alt="Beauty"/></div>
+            <div class="portrait-aspect group overflow-hidden rounded-lg border border-white/5"><img src="image/Frankein Website_49.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-all" alt="Lifestyle"/></div>
+            
+            <div class="aspect-square group overflow-hidden rounded-lg border border-white/5"><img src="image/Frankein Website_4.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-all" alt="Close-up Detail"/></div>
+            <div class="col-span-2 cinematic-aspect group overflow-hidden rounded-lg border border-white/5"><img src="image/Frankein Website_69.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-all" alt="Movie Still"/></div>
+            
+            <div class="aspect-square group overflow-hidden rounded-lg border border-white/5"><img src="image/Frankein Website_15.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-all" alt="Portrait Tone"/></div>
+            <div class="portrait-aspect group overflow-hidden rounded-lg border border-white/5"><img src="image/Frankein Website_54.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-all" alt="Vogue"/></div>
+            <div class="portrait-aspect group overflow-hidden rounded-lg border border-white/5"><img src="image/Frankein Website_74.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-all" alt="Urban"/></div>
+            <div class="portrait-aspect group overflow-hidden rounded-lg border border-white/5"><img src="image/Frankein Website_9.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-all" alt="Natural"/></div>
+            <div class="portrait-aspect group overflow-hidden rounded-lg border border-white/5"><img src="image/Frankein Website_17.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-all" alt="Mono"/></div>
+            
+            <div class="col-span-2 cinematic-aspect group overflow-hidden rounded-lg border border-white/5"><img src="image/Frankein Website_72.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-all" alt="Product"/></div>
+            <div class="portrait-aspect group overflow-hidden rounded-lg border border-white/5"><img src="image/Frankein Website_31.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-all" alt="Model"/></div>
+            <div class="portrait-aspect group overflow-hidden rounded-lg border border-white/5"><img src="image/Frankein Website_47.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-all" alt="Studio"/></div>
+            <div class="portrait-aspect group overflow-hidden rounded-lg border border-white/5"><img src="image/Frankein Website_85.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-all" alt="Man"/></div>
+            <div class="portrait-aspect group overflow-hidden rounded-lg border border-white/5"><img src="image/Frankein Website_18.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-all" alt="Executive"/></div>
+            
+            <div class="col-span-2 cinematic-aspect group overflow-hidden rounded-lg border border-white/5"><img src="image/Frankein Website_3.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-all" alt="Sunset"/></div>
+
+            <div class="portrait-aspect group overflow-hidden rounded-lg border border-white/5"><img src="image/Frankein Website_52.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-all" alt="New Gallery Image 1"/></div>
+            <div class="portrait-aspect group overflow-hidden rounded-lg border border-white/5"><img src="image/Frankein Website_59.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-all" alt="New Gallery Image 2"/></div>
+            <div class="aspect-square group overflow-hidden rounded-lg border border-white/5"><img src="image/Frankein Website_73.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-all" alt="New Gallery Image 3"/></div>
+            <div class="aspect-square group overflow-hidden rounded-lg border border-white/5"><img src="image/Frankein Website_24.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-all" alt="New Gallery Image 4"/></div>
+            <div class="col-span-2 cinematic-aspect group overflow-hidden rounded-lg border border-white/5"><img src="image/Frankein Website_13.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-all" alt="New Gallery Image 5"/></div>
+            <div class="portrait-aspect group overflow-hidden rounded-lg border border-white/5"><img src="image/Frankein Website_1.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-all" alt="New Gallery Image 6"/></div>
+            <div class="portrait-aspect group overflow-hidden rounded-lg border border-white/5"><img src="image/Frankein Website_14.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-all" alt="New Gallery Image 7"/></div>
+            <div class="aspect-square group overflow-hidden rounded-lg border border-white/5"><img src="image/Frankein Website_32.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-all" alt="New Gallery Image 8"/></div>
+            <div class="aspect-square group overflow-hidden rounded-lg border border-white/5"><img src="image/Frankein Website_36.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-all" alt="New Gallery Image 9"/></div>
+            <div class="col-span-2 cinematic-aspect group overflow-hidden rounded-lg border border-white/5"><img src="image/Frankein Website_5.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-all" alt="New Gallery Image 10"/></div>
+            <div class="aspect-square group overflow-hidden rounded-lg border border-white/5 bg-neutral-900 flex items-center justify-center text-neutral-500 uppercase tracking-[0.2em]">Coming Soon</div>
+            <div class="aspect-square group overflow-hidden rounded-lg border border-white/5 bg-neutral-900 flex items-center justify-center text-neutral-500 uppercase tracking-[0.2em]">Coming Soon</div>
+            <div class="aspect-square group overflow-hidden rounded-lg border border-white/5 bg-neutral-900 flex items-center justify-center text-neutral-500 uppercase tracking-[0.2em]">Coming Soon</div>
+            <div class="aspect-square group overflow-hidden rounded-lg border border-white/5 bg-neutral-900 flex items-center justify-center text-neutral-500 uppercase tracking-[0.2em]">Coming Soon</div>
+            <div class="aspect-square group overflow-hidden rounded-lg border border-white/5 bg-neutral-900 flex items-center justify-center text-neutral-500 uppercase tracking-[0.2em]">Coming Soon</div>
+            <div class="aspect-square group overflow-hidden rounded-lg border border-white/5 bg-neutral-900 flex items-center justify-center text-neutral-500 uppercase tracking-[0.2em]">Coming Soon</div>
+            <div class="aspect-square group overflow-hidden rounded-lg border border-white/5 bg-neutral-900 flex items-center justify-center text-neutral-500 uppercase tracking-[0.2em]">Coming Soon</div>
+            <div class="aspect-square group overflow-hidden rounded-lg border border-white/5 bg-neutral-900 flex items-center justify-center text-neutral-500 uppercase tracking-[0.2em]">Coming Soon</div>
+        </section>
+    </div>
+
+    <!-- VIDEO GALLERY SECTION -->
+    <section id="video-gallery-section" class="hidden mb-16">
+        <div class="mb-8 flex flex-col items-center text-center">
+            <span class="text-[#D4AF37] tracking-[0.3em] text-[10px] uppercase mb-1">MOTION & REELS</span>
+            <h2 class="text-2xl md:text-3xl font-serif uppercase tracking-wider">VIDEO PORTFOLIO</h2>
+            <div class="w-12 h-px bg-[#D4AF37]/40 mt-3"></div>
+        </div>
+
+        <!-- 2 Portrait Videos -->
+        <h3 class="text-xs font-serif uppercase tracking-widest text-neutral-400 mb-4">Portrait Videos (9:16)</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-12">
+            <!-- Portrait Video 1 -->
+            <div class="relative group overflow-hidden rounded-lg video-portrait-aspect bg-neutral-900 border border-white/5 shadow-2xl">
+                <video class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105" poster="videos/vidcover 1.jpg" controls preload="none">
+                    <source src="videos/from my paspective.mp4" type="video/mp4"/>
+                    Your browser does not support the video tag.
+                </video>
+                <div class="absolute bottom-0 left-0 right-0 p-4 glass-card translate-y-full group-hover:translate-y-0 transition-transform pointer-events-none">
+                    <p class="text-[9px] text-[#D4AF37] uppercase tracking-widest mb-0.5">VERTICAL REEL</p>
+                    <h4 class="text-sm font-serif">PORTRAIT SHOWCASE I</h4>
+                </div>
+            </div>
+            <!-- Portrait Video 2 -->
+            <div class="relative group overflow-hidden rounded-lg video-portrait-aspect bg-neutral-900 border border-white/5 shadow-2xl">
+                <video class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105" poster="videos/vid 2.jpg" controls preload="none">
+                    <source src="videos/add.mp4" type="video/mp4"/>
+                    Your browser does not support the video tag.
+                </video>
+                <div class="absolute bottom-0 left-0 right-0 p-4 glass-card translate-y-full group-hover:translate-y-0 transition-transform pointer-events-none">
+                    <p class="text-[9px] text-[#D4AF37] uppercase tracking-widest mb-0.5">VERTICAL REEL</p>
+                    <h4 class="text-sm font-serif">PORTRAIT SHOWCASE II</h4>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3 Landscape Videos -->
+        <h3 class="text-xs font-serif uppercase tracking-widest text-neutral-400 mb-4">Landscape Videos (16:9)</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Landscape Video 1 -->
+            <div class="relative group overflow-hidden rounded-lg video-landscape-aspect bg-neutral-900 border border-white/5 shadow-2xl">
+                <video class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105" poster="videos/land scap vid.jpg" controls preload="none">
+                    <source src="videos/JUNE KWANJUURA.mp4" type="video/mp4"/>
+                    Your browser does not support the video tag.
+                </video>
+                <div class="absolute bottom-0 left-0 right-0 p-4 glass-card translate-y-full group-hover:translate-y-0 transition-transform pointer-events-none">
+                    <p class="text-[9px] text-[#D4AF37] uppercase tracking-widest mb-0.5">CINEMATIC REEL</p>
+                    <h4 class="text-sm font-serif">LANDSCAPE CINEMATIC I</h4>
+                </div>
+            </div>
+            <!-- Landscape Video 2 -->
+            <div class="relative group overflow-hidden rounded-lg video-landscape-aspect bg-neutral-900 border border-white/5 shadow-2xl">
+                <video class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105" poster="images/new land scape.jpg" controls preload="none">
+                    <source src="videos/landscape-2.mp4" type="video/mp4"/>
+                    Your browser does not support the video tag.
+                </video>
+                <div class="absolute bottom-0 left-0 right-0 p-4 glass-card translate-y-full group-hover:translate-y-0 transition-transform pointer-events-none">
+                    <p class="text-[9px] text-[#D4AF37] uppercase tracking-widest mb-0.5">CINEMATIC REEL</p>
+                    <h4 class="text-sm font-serif">LANDSCAPE CINEMATIC II</h4>
+                </div>
+            </div>
+            <!-- Landscape Video 3 -->
+            <div class="relative group overflow-hidden rounded-lg video-landscape-aspect bg-neutral-900 border border-white/5 shadow-2xl">
+                <video class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105" poster="images/land scape 3.jpg" controls preload="none">
+                    <source src="videos/landscape-3.mp4" type="video/mp4"/>
+                    Your browser does not support the video tag.
+                </video>
+                <div class="absolute bottom-0 left-0 right-0 p-4 glass-card translate-y-full group-hover:translate-y-0 transition-transform pointer-events-none">
+                    <p class="text-[9px] text-[#D4AF37] uppercase tracking-widest mb-0.5">CINEMATIC REEL</p>
+                    <h4 class="text-sm font-serif">LANDSCAPE CINEMATIC III</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<script>
+    function switchGallery(type) {
+        const photoSection = document.getElementById('photo-gallery-section');
+        const videoSection = document.getElementById('video-gallery-section');
+        const photoBtn = document.getElementById('photo-tab-btn');
+        const videoBtn = document.getElementById('video-tab-btn');
+
+        if (type === 'photo') {
+            photoSection.classList.remove('hidden');
+            videoSection.classList.add('hidden');
+            
+            photoBtn.className = "px-8 py-3 font-serif uppercase tracking-widest text-xs transition-all duration-300 rounded-lg bg-[#D4AF37] text-black font-semibold shadow-lg";
+            videoBtn.className = "px-8 py-3 font-serif uppercase tracking-widest text-xs transition-all duration-300 rounded-lg bg-neutral-900 text-neutral-400 border border-white/5 hover:text-white";
+        } else {
+            photoSection.classList.add('hidden');
+            videoSection.classList.remove('hidden');
+            
+            videoBtn.className = "px-8 py-3 font-serif uppercase tracking-widest text-xs transition-all duration-300 rounded-lg bg-[#D4AF37] text-black font-semibold shadow-lg";
+            photoBtn.className = "px-8 py-3 font-serif uppercase tracking-widest text-xs transition-all duration-300 rounded-lg bg-neutral-900 text-neutral-400 border border-white/5 hover:text-white";
+        }
+    }
+</script>
+</body>
+</html>
